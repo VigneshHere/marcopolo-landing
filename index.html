@@ -1,239 +1,234 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marcopolo Cinemas | Cinematic Branding & Film Direction</title>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Marcopolo Cinemas | We direct cinema for brands</title>
 
-    <meta
-      name="description"
-      content="Marcopolo Cinemas provides film direction, cinematic advertisement films, professional sound design, branding, events and acting classes for businesses. We direct cinema for brands."
-    />
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+    font-family:'Poppins',sans-serif;
+    color:white;
+    background:url('bg.jpg') center/cover no-repeat fixed;
+    overflow-x:hidden;
+}
 
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+/* cinematic overlay */
+body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+    background:radial-gradient(circle at center, rgba(130,0,200,0.35), rgba(0,0,0,0.92));
+    z-index:-1;
+}
 
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Poppins", sans-serif;
-      }
+/* HERO */
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    animation:fadeIn 2s ease forwards;
+}
 
-      body {
-        color: white;
-        background: url("bg.jpg") center/cover no-repeat fixed;
-        overflow-x: hidden;
-      }
+.logo{
+    width:340px;
+    filter:drop-shadow(0 0 30px #a855f7);
+    animation:logoFloat 6s ease-in-out infinite;
+}
 
-      body::before {
-        content: "";
-        position: fixed;
-        inset: 0;
-        background: radial-gradient(
-          circle at center,
-          rgba(120, 0, 200, 0.25),
-          rgba(0, 0, 0, 0.9)
-        );
-        z-index: -1;
-      }
+/* Logo text */
+.brand-text{
+    font-family:'Orbitron',sans-serif;
+    font-size:38px;
+    letter-spacing:6px;
+    margin-top:18px;
+    background:linear-gradient(90deg,#d946ef,#a855f7,#9333ea);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    text-shadow:0 0 18px rgba(217,70,239,0.8);
+}
 
-      .hero {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 20px;
-      }
+.tagline{
+    margin-top:30px;
+    font-size:24px;
+    max-width:800px;
+    opacity:0;
+    animation:fadeUp 2s ease 1s forwards;
+}
 
-      .logo {
-        width: 280px;
-        margin-bottom: 30px;
-        filter: drop-shadow(0 0 25px #a855f7);
-        animation: glow 4s ease-in-out infinite;
-      }
+.cta{
+    margin-top:40px;
+    padding:14px 40px;
+    border-radius:40px;
+    background:linear-gradient(45deg,#9333ea,#2,#d946ef);
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    transition:.4s;
+    opacity:0;
+    animation:fadeUp 2s ease 1.5s forwards;
+}
+.cta:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 30px #d946ef;
+}
 
-      @keyframes glow {
-        0%, 100% {
-          filter: drop-shadow(0 0 15px #a855f7);
-        }
-        50% {
-          filter: drop-shadow(0 0 40px #d946ef);
-        }
-      }
+/* sections */
+.section{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:60px 20px;
+    opacity:0;
+    transform:translateY(60px);
+    transition:all 1s ease;
+}
 
-      .tagline {
-        font-size: 28px;
-        font-weight: 600;
-        max-width: 900px;
-        line-height: 1.4;
-      }
+.section.show{
+    opacity:1;
+    transform:translateY(0);
+}
 
-      .cta {
-        margin-top: 40px;
-        padding: 14px 36px;
-        border-radius: 40px;
-        background: linear-gradient(45deg, #9333ea, #d946ef);
-        text-decoration: none;
-        color: white;
-        font-weight: 600;
-        transition: 0.3s;
-      }
+h2{
+    font-size:42px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:18px;
+}
 
-      .cta:hover {
-        transform: scale(1.08);
-        box-shadow: 0 0 30px #d946ef;
-      }
+h2 svg{
+    width:44px;height:44px;
+    stroke:#d946ef;
+    filter:drop-shadow(0 0 10px #d946ef);
+}
 
-      .section {
-        min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 40px 20px;
-      }
+.section p{
+    font-size:20px;
+    margin-top:20px;
+    opacity:.9;
+}
 
-      h2 {
-        font-size: 40px;
-        margin-bottom: 20px;
-        display: flex;
-        gap: 16px;
-        align-items: center;
-        justify-content: center;
-      }
+/* animations */
+@keyframes logoFloat{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-12px)}
+}
 
-      h2 svg {
-        width: 42px;
-        height: 42px;
-        stroke: #d946ef;
-        filter: drop-shadow(0 0 10px #d946ef);
-      }
+@keyframes fadeUp{
+    to{opacity:1;transform:translateY(0);}
+}
 
-      .section p {
-        font-size: 20px;
-        opacity: 0.9;
-      }
+@keyframes fadeIn{
+    from{opacity:0}to{opacity:1}
+}
 
-      .contact {
-        background: rgba(0, 0, 0, 0.7);
-        backdrop-filter: blur(6px);
-        padding: 60px 20px;
-        text-align: center;
-      }
+/* contact */
+.contact{
+    background:rgba(0,0,0,0.7);
+    backdrop-filter:blur(8px);
+    padding:80px 20px;
+    text-align:center;
+}
 
-      .contact h3 {
-        font-size: 32px;
-        margin-bottom: 20px;
-      }
+.contact h3{
+    font-size:32px;
+    margin-bottom:20px;
+}
+.contact p{font-size:18px;line-height:1.8;}
 
-      .contact p {
-        font-size: 18px;
-        line-height: 1.8;
-      }
+@media(max-width:768px){
+    .brand-text{font-size:26px;letter-spacing:3px;}
+    .tagline{font-size:18px;}
+    h2{font-size:28px;}
+}
+</style>
+</head>
 
-      @media (max-width: 768px) {
-        .tagline {
-          font-size: 20px;
-        }
-        h2 {
-          font-size: 28px;
-        }
-      }
-    </style>
-  </head>
+<body>
 
-  <body>
-    <section class="hero">
-      <img src="logo.png" class="logo" alt="Marcopolo Cinemas Logo" />
-      <div class="tagline">We don’t make ads. We direct cinema for brands.</div>
-      <a href="#services" class="cta">Enter The World of Marcopolo</a>
-    </section>
+<section class="hero">
+    <img src="logo.png" class="logo"/>
+    <div class="brand-text">MARCOPOLO CINEMAS</div>
+    <div class="tagline">We don’t make ads. We direct cinema for brands.</div>
+    <a href="#services" class="cta">Enter The World of Marcopolo</a>
+</section>
 
-    <section id="services" class="section">
-      <div>
-        <h2>
-          <i data-lucide="video"></i>
-          Film Direction & Production
-        </h2>
+<section id="services" class="section">
+    <div>
+        <h2><i data-lucide="video"></i>Film Direction & Production</h2>
         <p>You don’t need a video. You need a director.</p>
-      </div>
-    </section>
+    </div>
+</section>
 
-    <section class="section">
-      <div>
-        <h2>
-          <i data-lucide="audio-waveform"></i>
-          Professional Sound & Audio Services
-        </h2>
+<section class="section">
+    <div>
+        <h2><i data-lucide="audio-waveform"></i>Professional Sound & Audio</h2>
         <p>Theatre sound for real-world brands.</p>
-      </div>
-    </section>
+    </div>
+</section>
 
-    <section class="section">
-      <div>
-        <h2>
-          <i data-lucide="clapperboard"></i>
-          Cinematic Advertisement Films
-        </h2>
+<section class="section">
+    <div>
+        <h2><i data-lucide="clapperboard"></i>Cinematic Advertisement Films</h2>
         <p>Ads that feel like trailers.</p>
-      </div>
-    </section>
+    </div>
+</section>
 
-    <section class="section">
-      <div>
-        <h2>
-          <i data-lucide="globe"></i>
-          Web, Social Media, Posters & Print
-        </h2>
+<section class="section">
+    <div>
+        <h2><i data-lucide="globe"></i>Web, Posters & Branding</h2>
         <p>After the film, the presence.</p>
-      </div>
-    </section>
+    </div>
+</section>
 
-    <section class="section">
-      <div>
-        <h2>
-          <i data-lucide="mic"></i>
-          Events & Celebrity Promotions
-        </h2>
+<section class="section">
+    <div>
+        <h2><i data-lucide="mic"></i>Events & Celebrity Promotions</h2>
         <p>When brands step off the screen.</p>
-      </div>
-    </section>
+    </div>
+</section>
 
-    <section class="section">
-      <div>
-        <h2>
-          <i data-lucide="theater"></i>
-          Acting, Direction & Dance Classes
-        </h2>
+<section class="section">
+    <div>
+        <h2><i data-lucide="theater"></i>Acting, Direction & Dance Classes</h2>
         <p>We train people for the camera, not the stage.</p>
-      </div>
-    </section>
+    </div>
+</section>
 
-    <section class="contact">
-      <h3>Contact Marcopolo Cinemas</h3>
-      <p>
-        Marcopolo Cinemas — Chennai<br />
-        Kaveri Street, Saligramam, Chennai<br /><br />
+<section class="contact">
+    <h3>Contact Marcopolo Cinemas</h3>
+    <p>
+        Chennai – Kaveri Street, Saligramam<br/><br/>
+        Coimbatore – Ooty Mettupalayam Road<br/><br/>
+        Phone: +91 86 10 50 51 33<br/>
+        www.marcopolocinemas.in
+    </p>
+</section>
 
-        Marcopolo Cinemas — Coimbatore<br />
-        Ooty Mettupalayam Road<br /><br />
+<script>
+lucide.createIcons();
 
-        Phone: +91 86 10 50 51 33<br />
-        Web: www.marcopolocinemas.in
-      </p>
-    </section>
+// scroll reveal
+const sections=document.querySelectorAll('.section');
+window.addEventListener('scroll',()=>{
+    sections.forEach(sec=>{
+        const top=sec.getBoundingClientRect().top;
+        if(top<window.innerHeight-100){
+            sec.classList.add('show');
+        }
+    });
+});
+</script>
 
-    <script>
-      lucide.createIcons();
-    </script>
-  </body>
+</body>
 </html>
